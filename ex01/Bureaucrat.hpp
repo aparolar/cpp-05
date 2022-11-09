@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 13:31:30 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/01 17:14:27 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/09 10:33:00 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@ class Bureaucrat
 	
 	public:
 		Bureaucrat();
+		Bureaucrat(Bureaucrat const &toCopy);
 		Bureaucrat(std::string name, int grade);
 		~Bureaucrat();
+
+		Bureaucrat& operator=(Bureaucrat const &toCopy);
 
 		std::string const &getName() const;
 		int getGrade() const;

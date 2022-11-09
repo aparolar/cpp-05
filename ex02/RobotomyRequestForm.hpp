@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:37:43 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/01 18:39:41 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:06:42 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ class RobotomyRequestForm : public Form
 
 	public:
 		RobotomyRequestForm();
+		RobotomyRequestForm(RobotomyRequestForm const &toCopy);
 		RobotomyRequestForm(std::string target);
 		~RobotomyRequestForm();
+
+		RobotomyRequestForm& operator=(RobotomyRequestForm const &toCopy);
 
 		const std::string &getTarget() const;
 		virtual void execute(Bureaucrat const &bureaucrat) const;

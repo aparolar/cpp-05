@@ -6,17 +6,33 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:59:40 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/01 17:40:47 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/08 19:10:12 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : _name(""), _gradeToSign(150) , _gradeToExecute(150), _isSigned(false)
+Form::Form()
+	: _name(""),
+	  _gradeToSign(150),
+	  _gradeToExecute(150),
+	  _isSigned(false)
 {
 }
 
-Form::Form(std::string name, int gradeToSign, int gradeToExecute) : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
+Form::Form(Form const &toCopy)
+	: _name(toCopy.getName()),
+	  _gradeToSign(toCopy.getSignGrade()),
+	  _gradeToExecute(toCopy.getExecuteGrade()),
+	  _isSigned(false)
+{
+	*this = toCopy;
+}
+
+Form::Form(std::string name, int gradeToSign, int gradeToExecute)
+	: _name(name),
+	  _gradeToSign(gradeToSign),
+	  _gradeToExecute(gradeToExecute)
 {
 	_isSigned = false;
 	if (gradeToSign < highGrade || gradeToExecute < highGrade)
@@ -26,6 +42,12 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute) : _name(name),
 }
 
 Form::~Form() {}
+
+Form& Form::operator=(Form const &toCopy)
+{
+	this->_isSigned = toCopy.isSigned();
+	return *this;
+}
 
 const std::string &Form::getName() const
 {

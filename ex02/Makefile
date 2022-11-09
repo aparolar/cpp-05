@@ -1,5 +1,5 @@
 NAME		=	a.out
-CXX			=	clang++ $(CXXFLAGS) -std=c++98
+CXX			=	clang++ $(CXXFLAGS) -std=c++98 -pedantic
 42FLAGS		=	-Wall -Werror -Wextra
 CXXFLAGS 	=	$(42FLAGS)
 LDFLAGS		=	-fsanitize=address

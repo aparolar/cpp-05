@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 08:07:33 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/02 08:26:43 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/09 10:35:14 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,11 @@ class Intern
 	
 	public:
 		Intern();
+		Intern(Intern const &toCopy);
 		~Intern();
+
+		Intern& operator=(Intern const &toCopy);
+		
 		Form *makeForm(const std::string &form, const std::string &target);
 };
 

@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:56:54 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/01 17:07:25 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/09 10:33:16 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,15 @@ class Form
 
 	public:
 		Form();
+		Form(Form const &toCopy);
 		Form(std::string name, int gradeToSign, int gradeToExecute);
 		~Form();
 
+		Form& operator=(Form const &toCopy);
+
 		const std::string &getName() const;
-		int getSignGrade() const;
-		int getExecuteGrade() const;
+		int getGradeToSign() const;
+		int getGradeToExecute() const;
 		bool isSigned() const;
 		void beSigned(Bureaucrat &b);
 

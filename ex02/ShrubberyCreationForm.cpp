@@ -6,18 +6,32 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:37:46 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/01 18:41:10 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:12:10 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(void) : Form("ShrubberyCreationForm", 145, 137) {}
+ShrubberyCreationForm::ShrubberyCreationForm(void)
+	: Form("ShrubberyCreationForm", 145, 137) {}
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("ShrubberyCreationForm", 145, 137), _target(target) {}
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+	: Form("ShrubberyCreationForm", 145, 137), _target(target) {}
+
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &toCopy)
+	: Form(toCopy)
+{
+	*this = toCopy;
+}
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
+
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm const &toCopy)
+{
+	this->_target = toCopy.getTarget();
+	return *this;
+}
 
 void ShrubberyCreationForm::execute(Bureaucrat const &bureaucrat) const
 {

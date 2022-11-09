@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 08:07:29 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/02 08:30:28 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/09 10:35:09 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,21 @@ Intern::Intern()
 	 _formNameArray[2] = "presidential request";
 }
 
+Intern::Intern(Intern const &toCopy)
+{
+	*this = toCopy;
+}
+
 Intern::~Intern()
 {
 
+}
+
+Intern& Intern::operator=(Intern const &toCopy)
+{
+	for (int i = 0; i < 3; i++)
+		this->_formNameArray[i] = toCopy._formNameArray[i];
+	return *this;
 }
 
 Form *Intern::makeForm(const std::string &form, const std::string &target)

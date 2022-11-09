@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 13:31:35 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/01 18:15:07 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/08 19:05:01 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,26 @@
 
 Bureaucrat::Bureaucrat() {}
 
-Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(Bureaucrat const &toCopy)
+{
+	*this = toCopy;
+}
+
+Bureaucrat::Bureaucrat(std::string name, int grade)
+	: _name(name),
+	  _grade(grade)
 {
 	checkGrade();
 }
 
 Bureaucrat::~Bureaucrat() {}
+
+Bureaucrat& Bureaucrat::operator=(Bureaucrat const &toCopy)
+{
+	this->_name = toCopy.getName();
+	this->_grade = toCopy.getGrade();
+	return *this;
+}
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {

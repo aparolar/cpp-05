@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:37:49 by aparolar          #+#    #+#             */
-/*   Updated: 2022/08/01 18:39:13 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:10:04 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,11 @@ class ShrubberyCreationForm : public Form
 
 	public:
 		ShrubberyCreationForm();
+		ShrubberyCreationForm(ShrubberyCreationForm const &toCopy);
 		ShrubberyCreationForm(std::string target);
 		~ShrubberyCreationForm();
+
+		ShrubberyCreationForm& operator=(ShrubberyCreationForm const &toCopy);
 
 		const std::string &getTarget() const;
 		virtual void execute(Bureaucrat const &bureaucrat) const;
