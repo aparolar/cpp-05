@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 13:31:30 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/09 10:33:45 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 14:39:11 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define BUREAUCRAT_HPP
 # include <iostream>
 # include <stdexcept>
-# include "Form.hpp"
 
 class Form;
 

@@ -6,15 +6,13 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:37:49 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/08 22:10:04 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 14:55:31 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
-
 # include "Form.hpp"
-# include <fstream>
 
 # define ASCII_TREES \
 "               ,#######,						" << std::endl << \

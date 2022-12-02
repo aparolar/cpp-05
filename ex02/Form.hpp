@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:56:54 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/09 10:33:54 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 14:42:14 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FORM_HPP
 
 #include <iostream>
-#include "Bureaucrat.hpp"
 
 class Bureaucrat;
 

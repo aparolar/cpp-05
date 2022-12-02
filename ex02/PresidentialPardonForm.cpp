@@ -6,11 +6,12 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:37:36 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/08 19:20:05 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:02:07 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
+#include "Bureaucrat.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(void)
 	: Form("PresidentialPardonForm", 25, 5) {}
@@ -21,7 +22,8 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &toC
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
-	: Form("PresidentialPardonForm", 25, 5), _target(target) {}
+	:	Form("PresidentialPardonForm", 25, 5),
+		_target(target) {}
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 

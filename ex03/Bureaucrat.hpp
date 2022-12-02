@@ -6,23 +6,24 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 13:31:30 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/09 10:34:57 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:23:42 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
-# include <iostream>
+
 # include <stdexcept>
-# include "Form.hpp"
+# include <string>
+# include <iostream>
 
 class Form;
 
 class Bureaucrat
 {
 	private:
-		std::string _name;
-		int			_grade;
+		const std::string	_name;
+		int					_grade;
 		void checkGrade();
 	
 	public:

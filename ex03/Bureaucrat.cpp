@@ -6,15 +6,17 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 13:31:35 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/08 19:05:01 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:20:55 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() {}
 
 Bureaucrat::Bureaucrat(Bureaucrat const &toCopy)
+	:	_name(toCopy.getName())
 {
 	*this = toCopy;
 }
@@ -30,7 +32,6 @@ Bureaucrat::~Bureaucrat() {}
 
 Bureaucrat& Bureaucrat::operator=(Bureaucrat const &toCopy)
 {
-	this->_name = toCopy.getName();
 	this->_grade = toCopy.getGrade();
 	return *this;
 }

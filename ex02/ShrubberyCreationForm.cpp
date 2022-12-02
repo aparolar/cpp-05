@@ -6,12 +6,13 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:37:46 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/08 22:12:10 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 14:59:05 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ShrubberyCreationForm.hpp"
+#include "Bureaucrat.hpp"
+#include <fstream>
 
 ShrubberyCreationForm::ShrubberyCreationForm(void)
 	: Form("ShrubberyCreationForm", 145, 137) {}

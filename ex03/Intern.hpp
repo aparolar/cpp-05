@@ -6,16 +6,16 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 08:07:33 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/09 10:35:14 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:24:46 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INTERN_HPP
 # define INTERN_HPP
-# include <iostream>
-# include "ShrubberyCreationForm.hpp"
-# include "RobotomyRequestForm.hpp"
-# include "PresidentialPardonForm.hpp"
+
+#include <iostream>
+
+class Form;
 
 class Intern
 {

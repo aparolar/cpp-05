@@ -6,11 +6,13 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:37:40 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/08 22:09:14 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:00:48 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include "Bureaucrat.hpp"
+#include "stdlib.h"
 
 RobotomyRequestForm::RobotomyRequestForm(void)
 	: Form("RobotomyRequestForm", 72, 45) {}
@@ -40,8 +42,7 @@ void RobotomyRequestForm::execute(Bureaucrat const &bureaucrat) const
 		throw Form::GradeTooLowException();
 	else
 	{
-		
-		//srand(time(NULL));
+		srand(time(NULL));
 		if (rand() % 2)
 		{
 			std::cout << "*Drilling noises in the background*" << std::endl;

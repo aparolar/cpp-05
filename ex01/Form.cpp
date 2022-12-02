@@ -6,11 +6,12 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:59:40 by aparolar          #+#    #+#             */
-/*   Updated: 2022/11/08 19:11:27 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/12/02 14:48:57 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form()
 	: _name(""),
